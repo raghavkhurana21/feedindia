@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+      
         <title>Feed India</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
@@ -17,7 +18,7 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav_style.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
        
         <style>
@@ -41,7 +42,7 @@ label {
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: #222122c4;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -93,9 +94,27 @@ input[type=submit]:hover {
 
 
     </head>
-    <body style="background-image: url('/images/address2.jpg')">
+    <body style="background:#ccdb86">
         <div class="banner-image" >
-        <header >
+          <header style="background: antiquewhite;">
+           
+            <img class="logo" src="/images/logo2.png" width="150" height="100" margin-right=10px alt="logo">
+            <nav>
+                <ul class="nav_list">
+                    <li><a href="http://localhost:8000/" style="color: black">Home</a></li>
+                    <li><a href="http://localhost:8000/users/about" style="color: black">About</a></li>
+                    <li><a href="http://localhost:8000/users/contact" style="color: black">Donate</a></li>
+                    <li><a href="http://localhost:8000/users/event" style="color: black">Upcoming Events</a></li>
+                    <li><a href="http://localhost:8ss000/" style="color: black">Be Voluntree</a></li>
+                    <li><a href="http://localhost:8000/users/Contact-Us" style="color: black">Contact</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            
+            
+        </header>
+        <!-- <header >
        <img class="logo" src="/images/logo2.png" width="150" height="100" margin-right=10px alt="logo">
       <nav>
           <ul class="nav_list">
@@ -111,7 +130,7 @@ input[type=submit]:hover {
           </ul>
       </nav>
  
-  </header>
+  </header> -->
        
 
            <!-- <form action="/create-contact" method="POST">
