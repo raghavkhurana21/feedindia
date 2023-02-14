@@ -30,6 +30,8 @@ and open the template in the editor.
   
 }
 
+
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -93,10 +95,24 @@ input[type=submit]:hover {
 
           
         </style>
-
-
+   <script>     
+    function req()
+    {
+    var empt = document.forms["form1"]["name","email","pnumber","edu","city","address","pincode","govid","intrst"].value;
+    if (empt == "")
+    {
+    alert("Please fill the required");
+    return false;
+    }
+    else 
+    {
+    alert('Thank you for your interest in associating with DAANVEER 🙇');
+    return true; 
+    }
+    }
+ </script>
     </head>
-    <body style="background:#ccdb86">
+    <body style="background:#e0e480">
         <!-- <div class="banner-image" >
           <header style="background: antiquewhite;">
            
@@ -160,62 +176,98 @@ input[type=submit]:hover {
         </form> -->
 
         <div class="container" style="color: inherit;">
-            <form action="/create-contact" method="POST">
+            <form action="/volunteer" method="POST" onsubmit="req()" name="form1">
               <div class="row">
                 <div class="col-25">
-                  <label for="fname">Full Name</label>
+                  <label for="fname">Full Name*</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="fname" name="name" placeholder="Your full name">
+                  <input type="text" id="fname" name="name" placeholder="Your full name" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="lname">E-mail</label>
+                  <label for="lname">E-mail*</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" name="email" placeholder="Your e-mail">
+                  <input type="text" name="email" placeholder="Your e-mail" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="lname">Contact no.</label>
+                  <label for="lname">Contact no.*</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" name="pnumber" placeholder="Phone no.">
+                  <input type="text" name="pnumber" placeholder="Phone no." maxlength="10" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Recent Education Qualification*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="edu" placeholder="Education pursuing or completed recently" required>
                 </div>
               </div>
             
+              
               <div class="row">
                 <div class="col-25">
-                  <label for="lname">Pincode</label>
+                  <label for="subject">City*</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" name="pincode" placeholder="Pincode">
+                  <textarea type="text" name="city" placeholder="Your City" style="height:100px" required></textarea>
+                </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Permanent Address*</label>
+                </div>
+                <div class="col-75">
+                  <textarea type="text" name="address" placeholder="Your Address" style="height:100px" required></textarea>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="subject">Address</label>
+                  <label for="lname">Pincode*</label>
                 </div>
                 <div class="col-75">
-                  <textarea type="text" name="address" placeholder="Your Address" style="height:100px"></textarea>
+                  <input type="text" name="pincode" placeholder="Pincode" maxlength="6" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="subject">Item Details</label>
+                  <label for="subject">Government issued ID*</label>
                 </div>
                 <div class="col-75">
-                  <textarea type="text" name="items" placeholder="Enter item details  with quantity ." style="height:200px"></textarea>
+                  <textarea type="text" name="govid" placeholder="(AADHAAR Card Number, PAN Card, Voter ID, Driving License)" style="height:200px" required></textarea>
                 </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Tell us in which areas you are specially interested in working</label>
+                </div>
+                <div class="col-75">
+                  <input type="checkbox" name="intrst[]" value="Events" > Events <br>
+                  <input type="checkbox" name="intrst[]" value="Field Work"> Field Work <br>
+                  <input type="checkbox" name="intrst[]" value="Fundraising"> Fundraising <br>
+                  <input type="checkbox" name="intrst[]" value="Deliveries"> Deliveries <br>
+                  <input type="checkbox" name="intrst[]" value="Website Development and IT"> Website Development and IT <br>
+                  <input type="checkbox" name="intrst[]" value="Volunteer Coordination"> Volunteer Coordination <br>
+                  <input type="checkbox" name="intrst[]" value="Newsletter Production"> Newsletter Production
+
+                </div>
+              </div>
+              <div>
+                <p>Our Policy<br>
+                  It is the policy of this organisation to provide equal opportunities without regard to race, color, religion, state origin, gender, age, or disability.
+                  </p>
               </div>
               <div class="row" style="margin: 25px 500px 0 0">
-                <input type="submit" value="Donate">
+                <input type="submit" value="Submit Details">
               </div>
             </form>
           </div>
-
+          
         
     </body>
 </html>

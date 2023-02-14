@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const db = require('./config/mongoose');
 const User = require('./model/User')
+const volnt=require('./model/volnt')
 const path = require('path');
 const port = 8000;
 
@@ -33,6 +34,28 @@ app.post('/create-contact',(req,res)=>(
       }
     console.log('************',newContact);
     return res.redirect('back');
+})
+
+))
+
+app.post('/volunteer',(req,res)=>(
+volnt.create({
+  name: req.body.name,
+  email: req.body.email,
+  pnumber : req.body.pnumber,
+  edu : req.body.edu,
+  city : req.body.city,
+  address : req.body.address,
+  pincode:req.body.pincode,
+  govid : req.body.govid,
+  intrst : req.body.intrst
+    },function(err,newContact){
+      if(err){
+      console.log('Error In Creating'+err);
+      return;
+    }
+  console.log('************',newContact);
+  return res.redirect('back');
 })
 
 ))

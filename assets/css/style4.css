@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+img{
+  border-radius: 10px;
+}
 section{
   position: relative;
   width: 100%;
@@ -14,7 +16,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url(homeimage.jpg) no-repeat;
+  background: url(Contact.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -29,9 +31,7 @@ header{
   align-items: center;
 }
 
-img{
-  border-radius: 10px;
-}
+
 
 img:hover
         {
