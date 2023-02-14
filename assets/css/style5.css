@@ -6,8 +6,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-section{
+img{
+  border-radius: 10px;
+}
+/*section{
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -17,7 +19,7 @@ section{
   background: url(homeimage.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-}
+}*/
 
 header{
   position: relative;
@@ -29,9 +31,7 @@ header{
   align-items: center;
 }
 
-img{
-  border-radius: 10px;
-}
+
 
 img:hover
         {

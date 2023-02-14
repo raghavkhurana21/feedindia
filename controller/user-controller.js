@@ -18,3 +18,8 @@ module.exports.contactUs = (req,res)=>{
     return res.render('contact1.ejs');
 
 }
+module.exports.volunteer=(req,res)=>{
+
+    return res.render('volunteer.ejs');
+
+}

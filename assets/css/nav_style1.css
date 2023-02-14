@@ -1,10 +1,83 @@
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: "Poppins", sans-serif;*/
 }
+a
+{font-family: "Poppins", sans-serif;}
+img{
+  border-radius: 10px;
+}
+/*section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(homeimage.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}*/
+
+header{
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+img:hover
+        {
+            margin-top: -20px;
+            transition: 1s;
+            transform:scale(1.3);
+            box-shadow: 2px 2px 2px #000;
+            z-index: 2;
+        }
+
+label{
+  display: none;
+}
+
+header .logo{
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header .navigation a{
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+header .navigation a:not(:last-child){
+  margin-right: 30px;
+}
+
+header .navigation a:hover{
+  background: #fff;
+}
+
 li,a,button
 {
     font-family: "Montserrat", sans-serif;
@@ -36,9 +109,6 @@ img:hover
 
 img{
             border-radius: 10px;
-            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
             
         }
 
